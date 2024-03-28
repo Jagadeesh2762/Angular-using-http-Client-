@@ -1,0 +1,13 @@
+<h2>Add Users</h2>
+<div class="container">
+    <form [formGroup]="userForm" method="post" (submit)="onSubmit()">
+        <label for="">Name<input type="text" class="form-control" formControlName="name"></label><br>
+        <label for="">E-mail<input type="text" class="form-control" formControlName="email"></label><br><br>
+        <input type="submit" value="Submit" class="btn btn-primary">
+    </form>
+</div>
+
+<h2>List of Users</h2>
+<ul>
+    <li *ngFor="let user of users">{{user.name}} | {{user.email}} </li>
+</ul>
